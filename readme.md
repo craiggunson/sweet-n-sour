@@ -30,4 +30,4 @@ const ssapi = { endpoint: 'https://yourendpoint.appsync-api.ap-southeast-2.amazo
 
 
 
-![Sample](sweet-n-sour.jpg)
+![Sample](sweet-n-sour.png)
