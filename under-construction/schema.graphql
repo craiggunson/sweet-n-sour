@@ -1,0 +1,115 @@
+﻿﻿schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Mutation {
+  createFeedback(input: CreateFeedbackInput!): feedback
+  deleteFeedback(input: DeleteFeedbackInput!): feedback
+  updateFeedback(input: UpdateFeedbackInput!): feedback
+}
+
+type Query {
+  getFeedback(id: String!, when: AWSTimestamp!): feedback
+  listFeedbacks(filter: TableFeedbackFilterInput, limit: Int, nextToken: String): feedbackConnection
+}
+
+type Subscription {
+  onCreateFeedback(id: String, sour: Int, sweet: Int, when: AWSTimestamp): feedback @aws_subscribe(mutations : ["createFeedback"])
+  onDeleteFeedback(id: String, sour: Int, sweet: Int, when: AWSTimestamp): feedback @aws_subscribe(mutations : ["deleteFeedback"])
+  onUpdateFeedback(id: String, sour: Int, sweet: Int, when: AWSTimestamp): feedback @aws_subscribe(mutations : ["updateFeedback"])
+}
+
+type feedback {
+  id: String!
+  sour: Int!
+  sweet: Int!
+  when: AWSTimestamp!
+}
+
+type feedbackConnection {
+  items: [feedback]
+  nextToken: String
+}
+
+input CreateFeedbackInput {
+  id: String!
+  sour: Int!
+  sweet: Int!
+  when: AWSTimestamp!
+}
+
+input DeleteFeedbackInput {
+  id: String!
+  when: AWSTimestamp!
+}
+
+input TableBooleanFilterInput {
+  eq: Boolean
+  ne: Boolean
+}
+
+input TableFeedbackFilterInput {
+  id: TableStringFilterInput
+  sour: TableIntFilterInput
+  sweet: TableIntFilterInput
+  when: TableIntFilterInput
+}
+
+input TableFloatFilterInput {
+  between: [Float]
+  contains: Float
+  eq: Float
+  ge: Float
+  gt: Float
+  le: Float
+  lt: Float
+  ne: Float
+  notContains: Float
+}
+
+input TableIDFilterInput {
+  beginsWith: ID
+  between: [ID]
+  contains: ID
+  eq: ID
+  ge: ID
+  gt: ID
+  le: ID
+  lt: ID
+  ne: ID
+  notContains: ID
+}
+
+input TableIntFilterInput {
+  between: [Int]
+  contains: Int
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+  ne: Int
+  notContains: Int
+}
+
+input TableStringFilterInput {
+  beginsWith: String
+  between: [String]
+  contains: String
+  eq: String
+  ge: String
+  gt: String
+  le: String
+  lt: String
+  ne: String
+  notContains: String
+}
+
+input UpdateFeedbackInput {
+  id: String!
+  sour: Int
+  sweet: Int
+  when: AWSTimestamp!
+}

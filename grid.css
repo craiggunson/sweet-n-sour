@@ -1,0 +1,80 @@
+html {
+
+      margin: auto;
+      width: 100vw;
+      border: 0;
+      padding: 0;
+      text-align: center;
+
+    }
+  
+body {
+
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  
+
+}
+  
+  .box {
+    background-color: rgba(255,255,0,.3);
+    color: rgba(255,255,0,1);
+    border-radius: 1em;
+    padding: .4em;
+    font-size: 150%;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+  }
+  
+  .box:hover {
+    background-color: rgba(0,0,0,.3);
+
+
+  }
+
+  .wrapper {
+    background-image: url("box.jpg");
+    background-repeat: no-repeat;
+    background-size: 50em 50em;
+    width: 50em;
+    height: 33em;
+    display: grid;
+    padding-top: 16em;
+    padding-left: 10em;
+  
+    grid-gap: .5em;
+    grid-template-columns: repeat(5, 5.5em);
+    grid-template-rows: repeat(5, 5.5em);
+    grid-auto-flow: column;
+  }
+
+  .yaxis {
+    font-family: 'Pridi', serif;
+   color: rgba(255,255,0,1);
+    font-size: 2em;
+    position: absolute;
+    top: 13em;
+    left: 2.5em;
+    transform: rotate(270deg);
+
+  }
+
+  .xaxis {
+    font-family: 'Pridi', serif;
+    color: rgba(255,255,0,1);
+    font-size: 2em;
+    position: absolute;
+    bottom: 4em;
+    right: 11em;
+  }
+  
+h2 {
+  font-family: 'Noto Sans TC', sans-serif;
+
+  font-size: 4em;
+padding-right: 2em;
+margin: 0;
+}

@@ -1,0 +1,25 @@
+{
+    "Table": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "id",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "when",
+                "AttributeType": "N"
+            }
+        ],
+        "TableName": "feedbackTable",
+        "KeySchema": [
+            {
+                "AttributeName": "id",
+                "KeyType": "HASH"
+            },
+            {
+                "AttributeName": "when",
+                "KeyType": "RANGE"
+            }
+        ]
+    }
+}

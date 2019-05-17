@@ -1,0 +1,3 @@
+curl 'https://bb27stnakjcmxpdx2elxl5wjpq.appsync-api.ap-southeast-2.amazonaws.com/graphql' \
+-H 'x-api-key: da2-ieujrolk4nhypmzuiokvazfiwa' -H 'Content-Type: application/json' \
+--data-binary $'{"query":"mutation createFeedback($createfeedbackinput: CreateFeedbackInput\u21) {\\n  createFeedback(input: $createfeedbackinput) {\\n    id\\n    when\\n    sweet\\n    sour\\n  }\\n}\\n\\n\\n query listFeedbacks {\\n  listFeedbacks {\\n    items {\\n      id\\n      when\\n      sweet\\n      sour\\n    }\\n  }\\n}\\n","variables":{"createfeedbackinput":{"id":"not-used","when":1557963494,"sweet":45,"sour":48}},"operationName":"createFeedback"}'
