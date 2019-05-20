@@ -1,0 +1,24 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title title title title title" ". . . . ." ". . . . ." ". . . . ." ". . . . ." ". . . . ." "footer footer footer footer footer";
+  }
+  
+  .title { grid-area: title; 
+    margin: auto;
+    width: 100vw;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+  
+  .footer { grid-area: footer; 
+    margin: auto;
+    width: 100vw;
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
