@@ -1,5 +1,9 @@
 sweet-n-sour
 ===================
+
+![Build Status](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiampCcndST2lUUWhzUkVaYjMrU1BkRk9zUVhKSVpPUVJ6bzR5QU9ob2pRWnlVcWZLb3lORktWRGV4UXdNSkZlcUx0YVZaTXZKbE45QXEyajVVSU8xTnpNPSIsIml2UGFyYW1ldGVyU3BlYyI6ImoyN3Z5aVo2NnNveDRIK1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+
+
 #### A simple ONE click feedback tool. 
 
 ## The problem
