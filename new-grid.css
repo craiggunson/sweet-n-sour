@@ -27,3 +27,14 @@ text-align: top;
 .zero { grid-area: zero; }
 
 
+
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+  /* Portrait styles here */
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+  /* Landscape styles here */
+}
+

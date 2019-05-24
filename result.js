@@ -1,8 +1,9 @@
 /* eslint-disable require-jsdoc */
 var result
 var ctx = document.getElementById('canvas').getContext('2d')
-const ssapi = { endpoint: 'https://32qkdka3drhwrdghwx2stlabk4.appsync-api.ap-southeast-2.amazonaws.com/graphql',
-  token: 'da2-ymyqn5jb7nb7pmrk3ugx5w42fy' }
+const ssapi = { endpoint: 'https://43aods3klff3nofktl2qh2flvq.appsync-api.ap-southeast-2.amazonaws.com/graphql', 
+  token: 'da2-yd3isv3azzbshp6hmys4m2wnxe' }
+
 // eslint-disable-next-line no-unused-vars
 function getresult () {
   var xhr = new XMLHttpRequest()
@@ -27,7 +28,7 @@ function getresult () {
         for (loop in test) {
           sweetdata.push(test[loop].sweet)
           sourdata.push(test[loop].sour)
-          timedata.push(test[loop].when)
+          timedata.push(test[loop].whenclick)
         }
       }
       console.log('sweetdata', sweetdata)
@@ -90,7 +91,7 @@ function getresult () {
     }
   }
   // eslint-disable-next-line no-useless-escape
-  xhr.send('{\"query\":\"query listFeedbacks {\\n  listFeedbacks {\\n    items {\\n      id\\n      when\\n      sweet\\n      sour\\n    }\\n  }\\n}\\n\"}')
+  xhr.send('{\"query\":\"query listFeedbacks {\\n  listFeedbacks {\\n    items {\\n      id\\n      whenclick\\n      sweet\\n      sour\\n    }\\n  }\\n}\\n\"}')
 }
 
 getresult()

@@ -2,8 +2,8 @@
 var when
 var sweet
 var sour
-const ssapi = { endpoint: 'https://32qkdka3drhwrdghwx2stlabk4.appsync-api.ap-southeast-2.amazonaws.com/graphql', 
-  token: 'da2-ymyqn5jb7nb7pmrk3ugx5w42fy' }
+const ssapi = { endpoint: 'https://43aods3klff3nofktl2qh2flvq.appsync-api.ap-southeast-2.amazonaws.com/graphql', 
+  token: 'da2-yd3isv3azzbshp6hmys4m2wnxe' }
 
 // eslint-disable-next-line no-unused-vars
 function givefeedback (x, y) {
@@ -22,5 +22,5 @@ function givefeedback (x, y) {
     }
   }
   // eslint-disable-next-line no-useless-escape
-  xhr.send('{\"query\":\"mutation createFeedback($createfeedbackinput: CreateFeedbackInput!) {\\n  createFeedback(input: $createfeedbackinput) {\\n    id\\n    when\\n    sweet\\n    sour\\n  }\\n}\\n\\n\\n",\"variables\":{\"createfeedbackinput\":{\"id\":\"not-used\",\"when\":' + when + ',\"sweet\":' + sweet + ',\"sour\":' + sour + '}},\"operationName\":\"createFeedback\"}')
+  xhr.send('{\"query\":\"mutation createFeedback($createfeedbackinput: CreateFeedbackInput!) {\\n  createFeedback(input: $createfeedbackinput) {\\n    id\\n    whenclick\\n    sweet\\n    sour\\n  }\\n}\\n\\n\\n",\"variables\":{\"createfeedbackinput\":{\"id\":\"not-used\",\"whenclick\":' + when + ',\"sweet\":' + sweet + ',\"sour\":' + sour + '}},\"operationName\":\"createFeedback\"}')
 }
