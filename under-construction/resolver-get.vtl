@@ -1,0 +1,30 @@
+{
+  "version": "2017-02-28",
+  "operation": "GetItem",
+  "key": {
+    "id": $util.dynamodb.toDynamoDBJson($ctx.request.headers.x-api-key),
+    "whenclick": $util.dynamodb.toDynamoDBJson($ctx.args.whenclick),
+  },
+}
+
+
+{
+	"version": "2017-02-28",
+	"operation": "Query",
+  "limit": 100,
+  "select": "ALL_ATTRIBUTES",
+	"query": {
+		"expression": "id = :id AND whenclick BETWEEN :start AND :fin",
+		"expressionValues": {
+			":id": {
+				"S": "da2-yd3isv3azzbshp6hmys4m2wnxe"
+			},
+			":start": {
+				"N": 0
+			},
+            ":fin": {
+            "N" : 2558672332906
+            }
+		}
+	}
+}

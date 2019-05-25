@@ -5,43 +5,31 @@
 mutation createFeedback($createfeedbackinput: CreateFeedbackInput!) {
   createFeedback(input: $createfeedbackinput) {
     id
-    when
+    whenclick
     sweet
     sour
   }
 }
-
+query getFeedback {
+  getFeedback (id: "da2-yd3isv3azzbshp6hmys4m2wnxe", whenclick: 1558672332906) {
+       items {
+      id
+      whenclick
+      sweet
+      sour
+    }
+  }
+} 
+  
 
 # After running createFeedback, try running the listFeedbacks query.
 query listFeedbacks {
   listFeedbacks {
     items {
       id
-      when
+      whenclick
       sweet
       sour
     }
-  }
-}
-
-query getFeedback {
-  getFeedback (id: "a2-ieujrolk4nhypmzuiokvazfiwa", when: 1557972405787) {
-    id
-    when
-    sweet
-    sour
-  }
-} 
-  
-
-
-
-
-{
-  "createfeedbackinput": {
-    "id": "Hello, world!",
-    "when": 1557963492,
-    "sweet": 45,
-    "sour": 48
   }
 }
