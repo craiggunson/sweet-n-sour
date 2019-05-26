@@ -1,7 +1,4 @@
-# Click the orange "Play" button and select the createFeedback
-# mutation to create an object in DynamoDB.
-# If you see an error that starts with "Unable to assume role",
-# wait a moment and try again.
+
 mutation createFeedback($createfeedbackinput: CreateFeedbackInput!) {
   createFeedback(input: $createfeedbackinput) {
     id
@@ -12,7 +9,7 @@ mutation createFeedback($createfeedbackinput: CreateFeedbackInput!) {
 }
 query getFeedback {
   getFeedback (id: "da2-yd3isv3azzbshp6hmys4m2wnxe", whenclick: 1558672332906) {
-       items {
+      items {
       id
       whenclick
       sweet

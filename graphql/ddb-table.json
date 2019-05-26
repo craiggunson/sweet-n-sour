@@ -1,0 +1,45 @@
+{
+    "Table": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "id",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "whenclick",
+                "AttributeType": "N"
+            }
+        ],
+        "TableName": "feedbackTable",
+        "KeySchema": [
+            {
+                "AttributeName": "id",
+                "KeyType": "HASH"
+            },
+            {
+                "AttributeName": "whenclick",
+                "KeyType": "RANGE"
+            }
+        ],
+        "TableStatus": "ACTIVE",
+        "CreationDateTime": 1558669618.288,
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 0,
+            "WriteCapacityUnits": 0
+        },
+        "TableSizeBytes": 1052,
+        "ItemCount": 19,
+        "TableArn": "arn:aws:dynamodb:ap-southeast-2:605702541254:table/feedbackTable",
+        "TableId": "54989f36-3e60-4623-b41b-d073c76ae996",
+        "BillingModeSummary": {
+            "BillingMode": "PAY_PER_REQUEST",
+            "LastUpdateToPayPerRequestDateTime": 1558669618.288
+        },
+        "SSEDescription": {
+            "Status": "ENABLED",
+            "SSEType": "KMS",
+            "KMSMasterKeyArn": "arn:aws:kms:ap-southeast-2:605702541254:key/10086740-a9d8-4c0a-8a17-8fb0205f4912"
+        }
+    }
+}
