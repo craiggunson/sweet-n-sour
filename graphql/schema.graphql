@@ -1,4 +1,4 @@
-﻿﻿schema {
+﻿schema {
   query: Query
   mutation: Mutation
   subscription: Subscription
@@ -11,21 +11,21 @@ type Mutation {
 }
 
 type Query {
-  getFeedback(id: String!, when: AWSTimestamp!): feedback
+  getFeedback(id: String!, whenclick: AWSTimestamp!): feedbackConnection
   listFeedbacks(filter: TableFeedbackFilterInput, limit: Int, nextToken: String): feedbackConnection
 }
 
 type Subscription {
-  onCreateFeedback(id: String, sour: Int, sweet: Int, when: AWSTimestamp): feedback @aws_subscribe(mutations : ["createFeedback"])
-  onDeleteFeedback(id: String, sour: Int, sweet: Int, when: AWSTimestamp): feedback @aws_subscribe(mutations : ["deleteFeedback"])
-  onUpdateFeedback(id: String, sour: Int, sweet: Int, when: AWSTimestamp): feedback @aws_subscribe(mutations : ["updateFeedback"])
+  onCreateFeedback(id: String, sour: String, sweet: String, whenclick: AWSTimestamp): feedback @aws_subscribe(mutations : ["createFeedback"])
+  onDeleteFeedback(id: String, sour: String, sweet: String, whenclick: AWSTimestamp): feedback @aws_subscribe(mutations : ["deleteFeedback"])
+  onUpdateFeedback(id: String, sour: String, sweet: String, whenclick: AWSTimestamp): feedback @aws_subscribe(mutations : ["updateFeedback"])
 }
 
 type feedback {
   id: String!
-  sour: Int!
-  sweet: Int!
-  when: AWSTimestamp!
+  sour: String
+  sweet: String
+  whenclick: AWSTimestamp
 }
 
 type feedbackConnection {
@@ -35,14 +35,14 @@ type feedbackConnection {
 
 input CreateFeedbackInput {
   id: String!
-  sour: Int!
-  sweet: Int!
-  when: AWSTimestamp!
+  sour: String
+  sweet: String
+  whenclick: AWSTimestamp!
 }
 
 input DeleteFeedbackInput {
   id: String!
-  when: AWSTimestamp!
+  whenclick: AWSTimestamp!
 }
 
 input TableBooleanFilterInput {
@@ -52,9 +52,9 @@ input TableBooleanFilterInput {
 
 input TableFeedbackFilterInput {
   id: TableStringFilterInput
-  sour: TableIntFilterInput
-  sweet: TableIntFilterInput
-  when: TableIntFilterInput
+  sour: TableStringFilterInput
+  sweet: TableStringFilterInput
+  whenclick: TableIntFilterInput
 }
 
 input TableFloatFilterInput {
@@ -109,7 +109,7 @@ input TableStringFilterInput {
 
 input UpdateFeedbackInput {
   id: String!
-  sour: Int
-  sweet: Int
-  when: AWSTimestamp!
+  sour: String
+  sweet: String
+  whenclick: AWSTimestamp!
 }
