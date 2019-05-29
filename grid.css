@@ -9,6 +9,16 @@ html {
 }
 
 
+a {
+  color: whitesmoke;
+  background-color: blueviolet;
+  border-radius: .3em;
+  text-decoration: none;
+  font-size: 1em;
+  padding: .5em;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 30em 1fr;

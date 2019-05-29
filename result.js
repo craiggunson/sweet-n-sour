@@ -28,7 +28,9 @@ function getresult () {
         for (loop in test) {
           sweetdata.push(test[loop].sweet)
           sourdata.push(test[loop].sour)
-          timedata.push(test[loop].whenclick)
+          var convertdate = new Date(test[loop].whenclick)
+          var converteddate = convertdate.getDate()+'/'+(convertdate.getMonth()+1)+' '+convertdate.getHours()+':'+convertdate.getMinutes()+':'+convertdate.getSeconds()
+          timedata.push(converteddate)
         }
       }
       console.log('sweetdata', sweetdata)
@@ -57,7 +59,7 @@ function getresult () {
           responsive: true,
           title: {
             display: true,
-            text: 'sweet and sour'
+            text: 'Sweet and Sour'
           },
           tooltips: {
             mode: 'index',
@@ -72,7 +74,7 @@ function getresult () {
               display: true,
               scaleLabel: {
                 display: true,
-                labelString: 'Month'
+                labelString: 'Time'
               }
             }],
             yAxes: [{
