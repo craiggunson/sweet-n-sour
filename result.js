@@ -22,7 +22,7 @@ function getresult () {
       var sweetdata = []
       var sourdata = []
       var timedata = []
-      var resultdata = result.data.listFeedbacks
+      var resultdata = result.data.getFeedback
       for (unwrap in resultdata) {
         test = resultdata[unwrap]
         for (loop in test) {
@@ -91,7 +91,7 @@ function getresult () {
     }
   }
   // eslint-disable-next-line no-useless-escape
-  xhr.send('{\"query\":\"query listFeedbacks {\\n  listFeedbacks {\\n    items {\\n      id\\n      whenclick\\n      sweet\\n      sour\\n    }\\n  }\\n}\\n\"}')
+  xhr.send('{\"query\":\"query getFeedback {\\n  getFeedback  (id: \\\"da2-yd3isv3azzbshp6hmys4m2wnxe\\\", whenclick: 1558672332906) {\\n    items {\\n      id\\n      whenclick\\n      sweet\\n      sour\\n    }\\n  }\\n}\\n\"}')
 }
 
 getresult()
