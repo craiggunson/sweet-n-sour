@@ -1,80 +1,89 @@
 html {
 
-      margin: auto;
-      width: 100vw;
-      border: 0;
-      padding: 0;
-      text-align: center;
-
-    }
-  
-body {
-
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  
+  margin: auto;
+  width: 100vw;
+  border: 0;
+  padding: 0;
+  text-align: center;
 
 }
-  
-  .box {
-    background-color: rgba(255,255,0,.3);
-    color: rgba(255,255,0,1);
-    border-radius: 1em;
-    padding: .4em;
-    font-size: 150%;
-    text-align: center;
-    margin: auto;
-    vertical-align: middle;
-  }
-  
-  .box:hover {
-    background-color: rgba(0,0,0,.3);
 
 
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 30em 1fr;
+  grid-template-rows: 7em 30em 4em 4em;
+  grid-template-areas: "title title title" "yaxis buttons bookend" ". xaxis ." "footer footer footer";
+}
 
-  .wrapper {
-    background-image: url("box.jpg");
-    background-repeat: no-repeat;
-    background-size: 50em 50em;
-    width: 50em;
-    height: 33em;
-    display: grid;
-    padding-top: 16em;
-    padding-left: 10em;
-  
-    grid-gap: .5em;
-    grid-template-columns: repeat(5, 5.5em);
-    grid-template-rows: repeat(5, 5.5em);
-    grid-auto-flow: column;
-  }
+.title { grid-area: title; }
 
-  .yaxis {
-    font-family: 'Pridi', serif;
-   color: rgba(255,255,0,1);
-    font-size: 2em;
-    position: absolute;
-    top: 13em;
-    left: 2.5em;
-    transform: rotate(270deg);
+.yaxis { grid-area: yaxis;
+  font-size: 1em;
+  position: inherit;
+  text-align: right; 
+  padding-right: .5em;
+  padding-top: .5em;
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: .9;
+  font-size: .8em;
 
-  }
 
-  .xaxis {
-    font-family: 'Pridi', serif;
-    color: rgba(255,255,0,1);
-    font-size: 2em;
-    position: absolute;
-    bottom: 4em;
-    right: 11em;
-  }
+
+}
+
+.xaxis { grid-area: xaxis;
+position: inherit;
+text-align: right; 
+padding-right: 1em;
+font-size: 1em;
+line-height: .9;
+font-size: .8em;
+font-family: 'Noto Sans TC', sans-serif;
+
+}
+.buttons { grid-area: buttons;
+ }
+
+.footer { grid-area: footer;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.bookend { grid-area: bookend; }
+
+
+.box {
+  background-color: rgba(255,220,0,1);
+  color: rgba(0,0,0,.5);
+  border-radius: 1em;
+  padding: .4em;
+  font-size: 150%;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.box:hover {
+  background-color: rgba(0,0,0,.3);
+
+
+}
+
+.wrapper {
+
+
+  display: grid;
+
+
+  grid-gap: .5em;
+  grid-template-columns: repeat(5, 5.5em);
+  grid-template-rows: repeat(5, 5.5em);
+  grid-auto-flow: column;
+}
+
   
 h2 {
   font-family: 'Noto Sans TC', sans-serif;
-
   font-size: 4em;
-padding-right: 2em;
-margin: 0;
+   margin: 0;
 }
