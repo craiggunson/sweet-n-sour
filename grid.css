@@ -5,6 +5,7 @@ html {
   border: 0;
   padding: 0;
   text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
 
 }
 
@@ -12,7 +13,7 @@ html {
 a {
   color: whitesmoke;
   background-color: blueviolet;
-  border-radius: .3em;
+  border-radius: .5em;
   text-decoration: none;
   font-size: 1em;
   padding: .5em;
@@ -22,53 +23,50 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 30em 1fr;
-  grid-template-rows: 7em 30em 4em 4em;
-  grid-template-areas: "title title title" "yaxis buttons bookend" ". xaxis ." "footer footer footer";
+  grid-template-columns: 1fr 4em 30em 1fr;
+  grid-template-rows: 6em 30em 4em 1fr;
+  grid-template-areas: "title title title title" ". yaxis buttons ." ". . xaxis ." "footer footer footer footer";
 }
 
-.title { grid-area: title; }
-
-.yaxis { grid-area: yaxis;
-  font-size: 1em;
-  position: inherit;
-  text-align: right; 
-  padding-right: .5em;
-  padding-top: .5em;
-  font-family: 'Noto Sans TC', sans-serif;
-  line-height: .9;
-  font-size: .8em;
-
-
-
-}
-
-.xaxis { grid-area: xaxis;
-position: inherit;
-text-align: right; 
-padding-right: 1em;
-font-size: 1em;
-line-height: .9;
-font-size: .8em;
-font-family: 'Noto Sans TC', sans-serif;
-
-}
-.buttons { grid-area: buttons;
+.title { grid-area: title;
  }
 
 .footer { grid-area: footer;
-  font-family: 'Noto Sans TC', sans-serif;
+margin-top: 2em; }
+
+.xaxis { grid-area: xaxis;
+margin: .2em;
+padding: 1em;
+border-radius: .5em;
+color: whitesmoke;
+background-image: linear-gradient(to right, red , yellow);
+
+
 }
 
-.bookend { grid-area: bookend; }
+.yaxis { grid-area: yaxis;
+margin: .2em;
+writing-mode: vertical-lr;
+text-orientation: sideways-right;
+padding: 1em;
+border-radius: .5em;
+color: whitesmoke;
+background-image: linear-gradient(rgb(157, 255, 0), rgba(255, 0, 98, 0.534));
+
+
+ }
+
+.buttons { grid-area: buttons;
+}
+
 
 
 .box {
   background-color: rgba(255,220,0,1);
   color: rgba(0,0,0,.5);
   border-radius: 1em;
-  padding: .4em;
-  font-size: 150%;
+  padding: .5em;
+  font-size: 147%;
   text-align: center;
   margin: auto;
   vertical-align: middle;
@@ -82,10 +80,7 @@ font-family: 'Noto Sans TC', sans-serif;
 
 .wrapper {
 
-
   display: grid;
-
-
   grid-gap: .5em;
   grid-template-columns: repeat(5, 5.5em);
   grid-template-rows: repeat(5, 5.5em);
