@@ -12,12 +12,13 @@ html {
 
 a {
   color: whitesmoke;
-  background-color: rgb(54, 0, 104);
   border-radius: .5em;
   text-decoration: none;
   font-size: 1em;
-  padding: .5em;
+  padding: 1em;
   font-family: 'Noto Sans TC', sans-serif;
+  background-image: linear-gradient(135deg, #5a00d9 25%, #6a00ff 25%, #6a00ff 50%, #5a00d9 50%, #5a00d9 75%, #6a00ff 75%, #6a00ff 100%);  background-size: 1em 1em;
+
 }
 
 
@@ -32,27 +33,24 @@ a {
  }
 
 .footer { grid-area: footer;
-margin-top: 2em; }
+margin-top: 3em; 
+margin-bottom: 2em;
+transform: translateX(2em);}
 
 .xaxis { grid-area: xaxis;
 margin: .2em;
 color: rgb(54, 0, 104);
-
-padding: 1em;
-border-radius: .5em;
-background-image: linear-gradient(to right, rgb(255, 0, 119) , yellow, rgb(170, 255, 0));
-
+font-size: 2em;
 
 }
 
 .yaxis { grid-area: yaxis;
 margin: .2em;
 color: rgb(54, 0, 104);
-writing-mode: vertical-lr;
+font-size: 2em;
+
+writing-mode: vertical-rl;
 text-orientation: sideways-right;
-padding: 1em;
-border-radius: .5em;
-background-image: linear-gradient(rgb(170, 255, 0),yellow, rgb(255, 0, 119));
 
 
  }
@@ -63,28 +61,28 @@ background-image: linear-gradient(rgb(170, 255, 0),yellow, rgb(255, 0, 119));
 
 
 .box {
-  background-color: rgb(229, 255, 0);
   color: rgba(0,0,0,.4);
-  border-radius: 1.5em;
+  border-radius: 2em;
   padding: .5em;
-  font-size: 147%;
+  font-size: 140%;
   text-align: center;
   margin: auto;
   vertical-align: middle;
 }
 
 .box:hover {
-  background-color: rgb(229, 255, 0,.2);
+  background-color: rgb(255, 255, 255,.5);
 
 
 }
 
 .wrapper {
+  background: linear-gradient(180deg, rgba(255,0,102,0) 20%, rgba(255,0,102,0.0980392) 20%, rgba(255,0,102,0.0980392) 40%, rgba(255,0,102,0.2) 40%, rgba(255,0,102,0.2) 60%, rgba(255,0,102,0.4) 60%, rgba(255,0,102,0.4) 80%, rgba(255,0,102,0.6) 80%), linear-gradient(-90deg, rgba(255,0,102,0) 20%, rgba(255,0,102,0.0980392) 20%, rgba(255,0,102,0.0980392) 40%, rgba(255,0,102,0.2) 40%, rgba(255,0,102,0.2) 60%, rgba(255,0,102,0.4) 60%, rgba(255,0,102,0.4) 80%, rgba(255,0,102,0.6) 80%), rgba(216,255,0,1);
 
   display: grid;
   grid-gap: .5em;
-  grid-template-columns: repeat(5, 5.5em);
-  grid-template-rows: repeat(5, 5.5em);
+  grid-template-columns: repeat(5, 5.6em);
+  grid-template-rows: repeat(5, 5.6em);
   grid-auto-flow: column;
 }
 
@@ -94,4 +92,5 @@ h2 {
   font-size: 4em;
    margin: 0;
    color: rgb(54, 0, 104);
+   transform: translateX(.5em);
 }
