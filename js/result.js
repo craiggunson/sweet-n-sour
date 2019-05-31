@@ -43,14 +43,14 @@ function getresult () {
           labels: timedata,
           datasets: [{
             label: 'sweet',
-            backgroundColor: '#ff0000',
+            backgroundColor: '#ff0055',
             borderColor: '#ff00aa',
             data: sweetdata,
-            fill: false
+            fill: true
           }, {
             label: 'sour',
-            fill: false,
-            backgroundColor: '#0000ff',
+            fill: true,
+            backgroundColor: '#7700ff',
             borderColor: '#aa00ff',
             data: sourdata
           }]
@@ -58,7 +58,7 @@ function getresult () {
         options: {
           responsive: true,
           title: {
-            display: true,
+            display: false,
             text: 'Sweet and Sour'
           },
           tooltips: {
@@ -78,6 +78,7 @@ function getresult () {
               }
             }],
             yAxes: [{
+              stacked: true,
               display: true,
               scaleLabel: {
                 display: true,
