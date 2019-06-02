@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4em 30em 1fr;
+  grid-template-rows: 7em 30em 4em 1fr;
+  grid-template-areas: "title title title title"". yaxis buttons ."". . xaxis .""footer footer footer footer";
+}
+
+.title {
+  grid-area: title;
+}
+
+.footer {
+  grid-area: footer;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  transform: translateX(2em);
+}
+
+.xaxis {
+  grid-area: xaxis;
+  margin: .2em;
+  color: rgb(54, 0, 104);
+  font-size: 2em;
+
+}
+
+.yaxis {
+  grid-area: yaxis;
+  margin: .2em;
+  color: rgb(54, 0, 104);
+  font-size: 2em;
+
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+
+
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
+
+
+.box {
+  color: rgba(0, 0, 0, .4);
+  font-size: 4em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.box:hover {
+  background-color: rgb(255, 255, 255, .5);
+
+
+}
+
+.wrapper {
+  background: linear-gradient(180deg, rgba(255, 0, 102, 0) 20%, rgba(255, 0, 102, 0.0980392) 20%, rgba(255, 0, 102, 0.0980392) 40%, rgba(255, 0, 102, 0.2) 40%, rgba(255, 0, 102, 0.2) 60%, rgba(255, 0, 102, 0.4) 60%, rgba(255, 0, 102, 0.4) 80%, rgba(255, 0, 102, 0.6) 80%), linear-gradient(-90deg, rgba(255, 0, 102, 0) 20%, rgba(255, 0, 102, 0.0980392) 20%, rgba(255, 0, 102, 0.0980392) 40%, rgba(255, 0, 102, 0.2) 40%, rgba(255, 0, 102, 0.2) 60%, rgba(255, 0, 102, 0.4) 60%, rgba(255, 0, 102, 0.4) 80%, rgba(255, 0, 102, 0.6) 80%), rgba(216, 255, 0, 1);
+
+  display: grid;
+  grid-gap: 0em;
+  grid-template-columns: repeat(5, 6em);
+  grid-template-rows: repeat(5, 6em);
+  grid-auto-flow: column;
+}
+
+
+h2 {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 4em;
+  margin: 0;
+  color: rgb(54, 0, 104);
+  transform: translateX(.5em);
+}

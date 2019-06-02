@@ -1,0 +1,23 @@
+html {
+
+  margin: auto;
+  width: 100vw;
+  border: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+
+}
+
+
+a {
+  color: whitesmoke;
+  border-radius: .5em;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 1em;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image: linear-gradient(135deg, #5a00d9 25%, #6a00ff 25%, #6a00ff 50%, #5a00d9 50%, #5a00d9 75%, #6a00ff 75%, #6a00ff 100%);
+  background-size: 1em 1em;
+
+}
