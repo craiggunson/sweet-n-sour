@@ -10,10 +10,10 @@ sweet-n-sour
 Surveys take too long, five star feedback is too narrow not taking into account the range of possibilities.
 
 ## The solution
-A ONE click feed back two with all kinds of emotinos, you choose.
+A ONE click feed back tool with all kinds of emotions, you choose.
 
 ## Score
-Results are recorded via (GraphQL) as x/y co-ordinates and open to just about any interpretation.
+Results are recorded via (GraphQL) as x/y coordinates and open to interpretation.
 
 ## Tokens
 This is just a draft, if I had (more) time a token (or oauth) page could be used to provide a multi-tennant app.  The back-end data structure already supports this.
