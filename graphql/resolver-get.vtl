@@ -20,13 +20,13 @@ after...
 		"expression": "id = :id AND whenclick BETWEEN :start AND :fin",
 		"expressionValues": {
 			":id": {
-				"S": "da2-yd3isv3azzbshp6hmys4m2wnxe"
+				"S" : "$ctx.request.headers.x-api-key"
 			},
 			":start": {
-				"N": 1558680357520
+				"N": 0
 			},
             ":fin": {
-            "N" : 1558738642736
+            "N" : 2558738642736
             }
 		}
 	}
