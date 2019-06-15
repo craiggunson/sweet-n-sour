@@ -4,26 +4,19 @@ sweet-n-sour
 ![Build Status](https://codebuild.ap-southeast-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiampCcndST2lUUWhzUkVaYjMrU1BkRk9zUVhKSVpPUVJ6bzR5QU9ob2pRWnlVcWZLb3lORktWRGV4UXdNSkZlcUx0YVZaTXZKbE45QXEyajVVSU8xTnpNPSIsIml2UGFyYW1ldGVyU3BlYyI6ImoyN3Z5aVo2NnNveDRIK1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
 
-#### A simple ONE click feedback tool. 
+#### A ONE click feedback tool. 
 
 ## The problem
-Surveys take too long, 1-5 star feedback is too narrow, for example if the food was rubbish but the service was great, the human suffers.
+Surveys take too long, five star feedback is too narrow not taking into account the range of possibilities.
 
 ## The solution
-A ONE click feed back two with two dimensions, for example...
+A ONE click feed back two with all kinds of emotinos, you choose.
 
-__Takeout__
-Sweet, Sour
+## Score
+Results are recorded via (GraphQL) as x/y co-ordinates and open to just about any interpretation.
 
-__Coffee__
-Speed, Taste
-
-__Product__
-Performance, Support
-
-__Pizza__
-Toppings, Temperature
-
+## Tokens
+This is just a draft, if I had (more) time a token (or oauth) page could be used to provide a multi-tennant app.  The back-end data structure already supports this.
 
 
 

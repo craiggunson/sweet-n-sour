@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="grid.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>sweet-n-sour, learning GraphQL.</title>
+        <title>sweet-n-sour</title>
 
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
@@ -15,94 +15,84 @@
 
         <div class="grid-container">
             <div class="title"><h2>糖醋</h2></div>
-            <div class="yaxis">
-              <i class='fas fa-angle-double-left'></i> 
-              SOUR
-              <i class='fas fa-angle-double-left'></i>
-            </div>
-            <div class="xaxis">
-                <i class='fas fa-angle-double-right'></i>
-              SWEET 
-              <i class='fas fa-angle-double-right'></i>
-
-            </div>
+  
             <div class="buttons">
 
                 <div class="wrapper">
                     <div class="box" id="box1" onclick="givefeedback(1,5)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-squint' ></i>
                     </div>
                     <div class="box" id="box2" onclick="givefeedback(1,4)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-grin-stars' ></i>
                     </div>
                     <div class="box" id="box3" onclick="givefeedback(1,3)">
-                      <i class='far fa-meh' style='font-size:3em'></i>
+                      <i class='far fa-meh' ></i>
                     </div>
                     <div class="box" id="box4" onclick="givefeedback(1,2)">
-                      <i class='far fa-frown' style='font-size:3em'></i>
+                      <i class='	far fa-sad-tear' ></i>
                     </div>
                     <div class="box" id="box5" onclick="givefeedback(1,1)">
-                      <i class='far fa-angry' style='font-size:3em'></i>
+                      <i class='far fa-angry' ></i>
                     </div>
                     <div class="box" id="box6" onclick="givefeedback(2,5)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-squint' ></i>
                     </div>
                     <div class="box" id="box7" onclick="givefeedback(2,4)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-grin-tears' ></i>
                     </div>
                     <div class="box" id="box8" onclick="givefeedback(2,3)">
-                      <i class='far fa-meh' style='font-size:3em'></i>
+                      <i class='far fa-meh' ></i>
                     </div>
                     <div class="box" id="box9" onclick="givefeedback(2,2)">
-                      <i class='far fa-frown' style='font-size:3em'></i>
+                      <i class='	far fa-tired' ></i>
                     </div>
                     <div class="box" id="box10" onclick="givefeedback(2,1)">
-                      <i class='far fa-frown' style='font-size:3em'></i>
+                      <i class='far fa-grimace' ></i>
                     </div>
                     <div class="box" id="box11" onclick="givefeedback(3,5)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-tongue-squint' ></i>
                     </div>
                     <div class="box" id="box12" onclick="givefeedback(3,4)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-grin' ></i>
                     </div>
                     <div class="box" id="box13" onclick="givefeedback(3,3)">
-                      <i class='far fa-meh' style='font-size:3em'></i>
+                      <i class='far fa-meh-blank' ></i>
                     </div>
                     <div class="box" id="box14" onclick="givefeedback(3,2)">
-                      <i class='far fa-meh' style='font-size:3em'></i>
+                      <i class='far fa-meh' ></i>
                     </div>
                     <div class="box" id="box15" onclick="givefeedback(3,1)">
-                      <i class='far fa-meh' style='font-size:3em'></i>
+                      <i class='far fa-surprise' ></i>
                     </div>
                     <div class="box" id="box16" onclick="givefeedback(4,5)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-squint-tears' ></i>
                     </div>
                     <div class="box" id="box17" onclick="givefeedback(4,4)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-smile-beam' ></i>
                     </div>
                     <div class="box" id="box18" onclick="givefeedback(4,3)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-grin' ></i>
                     </div>
                     <div class="box" id="box19" onclick="givefeedback(4,2)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-grin' ></i>
                     </div>
                     <div class="box" id="box20" onclick="givefeedback(4,1)">
-                      <i class='far fa-grin' style='font-size:3em'></i>
+                      <i class='far fa-grin' ></i>
                     </div>
                     <div class="box" id="box21" onclick="givefeedback(5,5)">
-                      <i class='far fa-grin-hearts' style='font-size:3em'></i>
+                      <i class='far fa-grin-hearts' ></i>
                     </div>
                     <div class="box" id="box22" onclick="givefeedback(5,4)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-beam-sweat' ></i>
                     </div>
                     <div class="box" id="box23" onclick="givefeedback(5,3)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-tongue' ></i>
                     </div>
                     <div class="box" id="box24" onclick="givefeedback(5,2)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-squint' ></i>
                     </div>
                     <div class="box" id="box25" onclick="givefeedback(5,1)">
-                      <i class='far fa-grin-squint' style='font-size:3em'></i>
+                      <i class='far fa-grin-squint' ></i>
                     </div>
               
         
@@ -113,10 +103,9 @@
             <div class="footer">
                     
                             <a href="result.html">
-                              See the result here <i class='fas fa-chart-area'></i>
+                              Check score <i class='fas fa-chart-area'></i>
                             </a>
                             </div>
-            <div class="bookend"></div>
           </div>
 
 

@@ -20,49 +20,24 @@ a {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
-
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 4em 30em 1fr;
-  grid-template-rows: 7em 30em 4em 1fr;
-  grid-template-areas: "title title title title" ". yaxis buttons ." ". . xaxis ." "footer footer footer footer";
+  grid-template-columns: 1fr 30em 1fr;
+  grid-template-rows: 1fr 30em 1fr;
+  grid-template-areas: "title title title" ". buttons ." "footer footer footer";
 }
 
-.title { grid-area: title;
- }
+.title { grid-area: title; }
 
-.footer { grid-area: footer;
-margin-top: 2em; }
+.footer { 
+  padding-top: 5em;
+  grid-area: footer; }
 
-.xaxis { grid-area: xaxis;
-margin: .2em;
-color: rgb(54, 0, 104);
-
-padding: 1em;
-border-radius: .5em;
-
-
-}
-
-.yaxis { grid-area: yaxis;
-margin: .2em;
-color: rgb(54, 0, 104);
-writing-mode: vertical-lr;
-text-orientation: sideways-right;
-padding: 1em;
-border-radius: .5em;
-
-
- }
-
-.buttons { grid-area: buttons;
-}
-
-
+.buttons { grid-area: buttons; }
 
 .box {
   color: rgba(0,0,0,.4);
-  font-size: 145%;
+  font-size: 5em;
   float: right;
   text-align: center;
   margin: auto;
