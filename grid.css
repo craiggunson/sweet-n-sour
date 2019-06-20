@@ -31,11 +31,12 @@ a {
   grid-template-areas: "title title title" ". buttons ." "footer footer footer";
 }
 
-.title { grid-area: title; }
+.title { grid-area: title;
+  padding-top: 2em; }
 
 .footer { 
-  padding-top: 6em;
-  grid-area: footer; }
+  padding-top: 7em;
+    grid-area: footer; }
 
 .buttons { grid-area: buttons; }
 
