@@ -34,7 +34,7 @@ a {
 .title { grid-area: title; }
 
 .footer { 
-  padding-top: 5em;
+  padding-top: 6em;
   grid-area: footer; }
 
 .buttons { grid-area: buttons; }
